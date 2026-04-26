@@ -24,7 +24,6 @@ enum Strings_en {
         "settings.tab.layouts":          "Layouts",
         "settings.tab.hotkey":           "Hotkey",
         "settings.tab.permissions":      "Permissions",
-        "settings.tab.log":              "Log",
 
         // ── General Tab ─────────────────────────────────────────────
         "general.language":              "Language",
@@ -91,21 +90,6 @@ enum Strings_en {
         "permissions.refreshStatus":     "Refresh Status",
 
         // ── Conversion Log Tab ──────────────────────────────────────
-        "log.title":                     "Conversion Log",
-        "log.entries":                   "%d entries",
-        "log.exportJSON":                "Export JSON",
-        "log.clearAll":                  "Clear All",
-        "log.ratingHint":                "Rate each conversion as correct or incorrect to build training data. Click to cycle: unrated -> correct -> incorrect -> unrated.",
-        "log.emptyTitle":                "No conversions logged yet.",
-        "log.emptyHint":                 "Use the hotkey to convert text and entries will appear here.",
-        "log.clearConfirmTitle":         "Clear All Logs?",
-        "log.clearConfirmMessage":       "This will permanently delete all conversion log entries. This cannot be undone.",
-        "log.cancel":                    "Cancel",
-        "log.deleteEntry":               "Delete this entry",
-        "log.exportPanelTitle":          "Export Conversion Log",
-        "log.ratingUnrated":             "Unrated — click to mark as correct",
-        "log.ratingCorrect":             "Correct — click to mark as incorrect",
-        "log.ratingIncorrect":           "Incorrect — click to clear rating",
 
         // ── Logging Settings (General Tab) ─────────────────────────
         "general.logging":               "Conversion Logging",
@@ -115,9 +99,6 @@ enum Strings_en {
         "general.logUnlimited":          "0 = unlimited",
 
         // ── Logging Disabled (Log Tab) ─────────────────────────────
-        "log.unlimited":                 "Unlimited",
-        "log.disabledTitle":             "Logging is Disabled",
-        "log.disabledHint":              "Enable logging above to start recording conversions.",
 
         // ── About Window ────────────────────────────────────────────
         "about.windowTitle":             "About LangSwitcher",

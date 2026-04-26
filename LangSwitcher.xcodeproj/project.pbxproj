@@ -22,9 +22,6 @@
 		E10000010000000000000013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000013 /* Assets.xcassets */; };
 		E10000010000000000000014 /* HotkeyRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000014 /* HotkeyRecorderView.swift */; };
 		E10000010000000000000015 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000015 /* PermissionsView.swift */; };
-		E10000010000000000000016 /* ConversionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000016 /* ConversionLog.swift */; };
-		E10000010000000000000017 /* ConversionLogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000017 /* ConversionLogStore.swift */; };
-		E10000010000000000000018 /* ConversionLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000018 /* ConversionLogView.swift */; };
 		E10000010000000000000019 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000019 /* LocalizationManager.swift */; };
 		E10000010000000000000020 /* Strings_en.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000020 /* Strings_en.swift */; };
 		E10000010000000000000021 /* Strings_ru.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10000020000000000000021 /* Strings_ru.swift */; };
@@ -58,9 +55,6 @@
 		E10000020000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10000020000000000000014 /* HotkeyRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyRecorderView.swift; sourceTree = "<group>"; };
 		E10000020000000000000015 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
-		E10000020000000000000016 /* ConversionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionLog.swift; sourceTree = "<group>"; };
-		E10000020000000000000017 /* ConversionLogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionLogStore.swift; sourceTree = "<group>"; };
-		E10000020000000000000018 /* ConversionLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionLogView.swift; sourceTree = "<group>"; };
 		E10000020000000000000019 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
 		E10000020000000000000020 /* Strings_en.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings_en.swift; sourceTree = "<group>"; };
 		E10000020000000000000021 /* Strings_ru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings_ru.swift; sourceTree = "<group>"; };
@@ -139,7 +133,6 @@
 				E10000020000000000000005 /* AboutView.swift */,
 				E10000020000000000000014 /* HotkeyRecorderView.swift */,
 				E10000020000000000000015 /* PermissionsView.swift */,
-				E10000020000000000000018 /* ConversionLogView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,7 +146,6 @@
 				E10000020000000000000009 /* HotkeyManager.swift */,
 				E10000020000000000000010 /* AccessibilityService.swift */,
 				E10000020000000000000011 /* SettingsManager.swift */,
-				E10000020000000000000017 /* ConversionLogStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				E10000020000000000000012 /* KeyboardLayout.swift */,
-				E10000020000000000000016 /* ConversionLog.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,9 +307,6 @@
 				E10000010000000000000012 /* KeyboardLayout.swift in Sources */,
 				E10000010000000000000014 /* HotkeyRecorderView.swift in Sources */,
 				E10000010000000000000015 /* PermissionsView.swift in Sources */,
-				E10000010000000000000016 /* ConversionLog.swift in Sources */,
-				E10000010000000000000017 /* ConversionLogStore.swift in Sources */,
-				E10000010000000000000018 /* ConversionLogView.swift in Sources */,
 				E10000010000000000000019 /* LocalizationManager.swift in Sources */,
 				E10000010000000000000020 /* Strings_en.swift in Sources */,
 				E10000010000000000000021 /* Strings_ru.swift in Sources */,

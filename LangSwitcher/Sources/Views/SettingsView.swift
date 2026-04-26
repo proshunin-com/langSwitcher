@@ -11,7 +11,6 @@ struct SettingsView: View {
             (l10n.t("settings.tab.layouts"), "keyboard"),
             (l10n.t("settings.tab.hotkey"), "command"),
             (l10n.t("settings.tab.permissions"), "lock.shield"),
-            (l10n.t("settings.tab.log"), "list.bullet.rectangle"),
         ]
     }
     
@@ -61,10 +60,6 @@ struct SettingsView: View {
                         .environmentObject(l10n)
                 case 3:
                     PermissionsView()
-                        .environmentObject(l10n)
-                case 4:
-                    ConversionLogView(logStore: ConversionLogStore.shared)
-                        .environmentObject(settingsManager)
                         .environmentObject(l10n)
                 default:
                     EmptyView()

@@ -6,7 +6,6 @@ import UserNotifications
 final class AppDelegate: NSObject, NSApplicationDelegate {
     
     let settingsManager = SettingsManager.shared
-    let conversionLogStore = ConversionLogStore.shared
     private var statusBarController: StatusBarController?
     private let hotkeyManager = HotkeyManager()
     private let accessibilityService = AccessibilityService()
@@ -110,7 +109,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         if success {
             NSLog("[LangSwitcher] Direct conversion succeeded")
             settingsManager.incrementConversionCount()
-            logConversion(input: capturedInput, output: capturedOutput, mode: "direct")
             switchLayoutIfNeeded(targetLayoutID: capturedTargetLayout, conversionOccurred: true)
             playFeedback()
             showConversionNotification(input: capturedInput, output: capturedOutput)
@@ -161,7 +159,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         
         if success {
             settingsManager.incrementConversionCount()
-            logConversion(input: capturedInput, output: capturedOutput, mode: "lastWord")
             switchLayoutIfNeeded(targetLayoutID: capturedTargetLayout, conversionOccurred: true)
             playFeedback()
             showConversionNotification(input: capturedInput, output: capturedOutput)
@@ -187,40 +184,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         
         if success {
             settingsManager.incrementConversionCount()
-            logConversion(input: capturedInput, output: capturedOutput, mode: "greedyLine")
             switchLayoutIfNeeded(targetLayoutID: capturedTargetLayout, conversionOccurred: true)
             playFeedback()
             showConversionNotification(input: capturedInput, output: capturedOutput)
         }
-    }
-    
-    // MARK: - Conversion Logging
-    
-    private func logConversion(input: String?, output: String?, mode: String) {
-        guard settingsManager.loggingEnabled else { return }
-        guard let input = input, let output = output else { return }
-        
-        let layouts = settingsManager.enabledLayouts
-        let layoutIDs = layouts.map(\.id)
-        
-        let sourceLayout = LayoutMapper.detectSourceLayout(text: input, candidateLayouts: layoutIDs) ?? "unknown"
-        let targetLayout = layouts.first(where: { $0.id != sourceLayout })?.id ?? "unknown"
-        
-        conversionLogStore.log(
-            inputText: input,
-            outputText: output,
-            sourceLayout: sourceLayout,
-            targetLayout: targetLayout,
-            conversionMode: mode
-        )
-        
-        // Trim old entries if max is set
-        let maxEntries = settingsManager.logMaxEntries
-        if maxEntries > 0 {
-            conversionLogStore.trimToMaxEntries(maxEntries)
-        }
-    }
-    
+    }    
     // MARK: - Layout Switch
     
     /// Switch system keyboard layout to the target after conversion, based on user's setting.
